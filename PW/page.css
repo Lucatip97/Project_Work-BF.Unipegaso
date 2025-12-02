@@ -1,0 +1,319 @@
+/* ===== RESET BASE ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Poppins", system-ui, sans-serif;
+    color: #198adc;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.2s ease;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("assets/Sfondohtml.1.jpg") no-repeat fixed;   
+    background-size: cover;
+    background-position:center;
+    filter: brightness(0.4) blur(5px);
+    z-index: -1;
+    
+  }
+  
+  
+  /* ===== CONTAINER GENERALE ===== */
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* ===== HEADER ===== */
+  .site-header {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position:static; ;
+    top: auto;
+    z-index: 10;
+  }
+  
+  .header-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .logo_brand {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .site-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    
+  }
+  .logo_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .site-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 0px;
+    line-height: 1.1;
+    color:linear-gradient(90deg, #0043A8, #2E6EDC, #7FA9F5, #FFFFFF) ;
+  }
+  .brand p {margin:0;}
+  
+  /* ===== NAVBAR ===== */
+  .site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+
+  
+  .site-nav a {
+    background: linear-gradient(90deg, #0043A8, #2E6EDC, #7FA9F5, #FFFFFF) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 500;
+    position: relative;
+    text-decoration: none;
+  }
+  .site-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg,  #0043A8, #2E6EDC, #7FA9F5, #FFFFFF);
+    box-shadow: 0 0 6px   #0043A8, #2E6EDC, #7FA9F5, #FFFFFF;
+    transition: width 0.3s ease;
+  }
+  .site-nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* ===== CARD SECTIONS ===== */
+  .card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px) saturate(120%);
+    -webkit-backdrop-filter: blur(15px) saturate(120%);
+    animation: fadeUp 1s ease both;
+  }
+  
+  /* ===== TESTI ===== */
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(90deg, #0043A8, #2E6EDC, #7FA9F5, #FFFFFF) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  p, li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* ===== LISTE E LINK ===== */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: 0.4rem;
+  }
+  a {
+    color: #e2eaf6;
+    transition: opacity 0.2s;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+  
+  /* ===== BADGE E PILLARS ===== */
+  .badge { 
+    background: linear-gradient(90deg, #0043A8, #2E6EDC, #7FA9F5, #FFFFFF);
+    color: #0043A8;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+    
+    
+  
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+  .pillar {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease;
+  }
+  .pillar:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* ===== DOWNLOAD LIST ===== */
+  .download-list a {
+    display: inline-block;
+    margin: 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  /* ===== FOOTER ===== */
+  .site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 3rem;
+  }
+  
+  /* ===== ANIMAZIONI ===== */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 700px) {
+    .site-nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    .site-title {
+      font-size: 1.5rem;
+    }
+  }
+  .gradient-text {
+    font-size:5rem;
+    font-weight: 5800;
+    background: linear-gradient(90deg, #f39f6b, #c879ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: gradientMove 5s linear infinite;
+  }
+  
+  .brand .logo_block {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;      
+    gap: 4px;                   
+  }
+  
+  .brand .logo_brand {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+  }
+  
+  .brand .site-subtitle {
+    margin-top: -4px !important;   
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    background:linear-gradient(90deg, #0043A8, #2E6EDC, #7FA9F5, #FFFFFF) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tel {
+    background: linear-gradient(90deg, #0043A8, #2E6EDC, #7FA9F5, #FFFFFF) ;
+    color: #1a1a1a;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    filter:brightness(0.9); }
+
+.ciclo_brand {
+  float: right;              
+  width: 100px;              
+  margin: 0 0 1rem 1.5rem;   
+  object-fit: contain;
+  display: block;
+  max-width: 140%;   
+  height: auto;      
+  object-fit: contain; 
+  margin: 2rem auto;   
+  text-align: center; 
+  transform: translateX(-50%);
+  }
+        
+
+
+@media (max-width: 768px) {
+  .ciclo_brand {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 80%;
+  }
+}
+
+
+
+
+
